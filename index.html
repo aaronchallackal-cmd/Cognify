@@ -6,73 +6,86 @@
   <title>Cognify | Cognitive Performance Lab</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
   <header class="header">
-    <div class="logo">
+    <a class="logo" href="#home">
       <span class="logo-mark"></span>
       Cognify
-    </div>
+    </a>
 
     <nav>
-      <a href="#test">Test</a>
-      <a href="#benchmarks">Benchmarks</a>
+      <a href="#reaction">Reaction</a>
+      <a href="#stroop">Stroop</a>
+      <a href="#memory">Memory</a>
+      <a href="#choice">Choice</a>
+      <a href="#results">Results</a>
       <a href="#science">Science</a>
-      <a href="#limitations">Limitations</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-left">
       <p class="eyebrow">Cognitive Performance Lab</p>
-      <h1>Measure reaction time through a clean interactive browser task.</h1>
+
+      <h1>
+        Explore reaction time, attention, memory, and decision speed.
+      </h1>
+
       <p class="hero-text">
-        Cognify is an educational health tech project that demonstrates how response speed, attention, and consistency can be measured through short cognitive tasks.
+        Cognify is an educational health technology project that demonstrates
+        cognitive performance through short interactive browser tasks.
       </p>
 
       <div class="hero-buttons">
-        <a href="#test" class="primary-button">Start Reaction Test</a>
+        <a href="#reaction" class="primary-button">Start Testing</a>
         <a href="#science" class="ghost-button">Learn the Science</a>
       </div>
     </div>
 
     <div class="hero-panel">
       <div class="metric-preview">
-        <p>Current Module</p>
-        <h3>Reaction Time</h3>
+        <p>Available Modules</p>
+        <h3>Four Cognitive Tasks</h3>
       </div>
 
       <div class="mini-grid">
         <div>
-          <span>Trials</span>
-          <strong>5</strong>
+          <span>Modules</span>
+          <strong>4</strong>
         </div>
+
         <div>
           <span>Measures</span>
-          <strong>Speed</strong>
+          <strong>Speed, Focus, Memory</strong>
         </div>
+
         <div>
           <span>Output</span>
-          <strong>Dashboard</strong>
+          <strong>Results Dashboard</strong>
         </div>
       </div>
 
       <div class="hero-explanation">
-        <h4>What this module measures</h4>
+        <h4>What Cognify measures</h4>
+
         <p>
-          This task measures the time between a visual signal appearing and your click response. Lower times usually mean faster responses, but device delay and focus can affect results.
+          Complete each module to explore visual response speed, selective
+          attention, working memory, and decision making performance.
         </p>
       </div>
     </div>
   </section>
 
   <main>
-    <section id="test" class="section-grid">
+    <section id="reaction" class="module-section">
       <div class="info-card">
         <p class="section-label">Module 01</p>
         <h2>Simple Reaction Time</h2>
+
         <p>
-          Wait for the stimulus to turn green, then click as fast as possible. Cognify records your response time across five trials and summarizes your performance.
+          Wait for the testing area to turn green, then click as quickly as
+          possible. Cognify records your response speed across five trials.
         </p>
 
         <div class="instructions">
@@ -80,10 +93,12 @@
             <strong>1</strong>
             <p>Press start</p>
           </div>
+
           <div>
             <strong>2</strong>
             <p>Wait for green</p>
           </div>
+
           <div>
             <strong>3</strong>
             <p>Click immediately</p>
@@ -98,140 +113,548 @@
         </div>
 
         <div class="button-row">
-          <button id="startButton">Start Test</button>
-          <button id="resetButton" class="secondary-button">Reset</button>
+          <button id="startReactionButton">Start Reaction Test</button>
+          <button id="resetReactionButton" class="secondary-button">
+            Reset
+          </button>
         </div>
 
         <div class="test-footer">
-          <p id="trialStatus">Trials completed: 0 / 5</p>
-          <p id="message"></p>
+          <p id="reactionStatus">Trials completed: 0 / 5</p>
+          <p id="reactionMessage"></p>
         </div>
       </div>
     </section>
 
-    <section id="results" class="results-section">
+    <section id="stroop" class="module-section">
+      <div class="info-card">
+        <p class="section-label">Module 02</p>
+        <h2>Stroop Attention Test</h2>
+
+        <p>
+          Identify the colour of the displayed text while ignoring the written
+          word. This task demonstrates selective attention and inhibitory
+          control.
+        </p>
+
+        <div class="instructions">
+          <div>
+            <strong>1</strong>
+            <p>Read the instructions</p>
+          </div>
+
+          <div>
+            <strong>2</strong>
+            <p>Ignore the written word</p>
+          </div>
+
+          <div>
+            <strong>3</strong>
+            <p>Select the text colour</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="stroop-display">
+          <span id="stroopWord" class="stroop-word">Ready</span>
+          <small id="stroopPrompt">Press start to begin the test</small>
+        </div>
+
+        <div class="colour-options">
+          <button class="stroop-choice red-button" data-colour="red">
+            Red
+          </button>
+
+          <button class="stroop-choice blue-button" data-colour="blue">
+            Blue
+          </button>
+
+          <button class="stroop-choice green-button" data-colour="green">
+            Green
+          </button>
+
+          <button class="stroop-choice yellow-button" data-colour="yellow">
+            Yellow
+          </button>
+        </div>
+
+        <div class="button-row">
+          <button id="startStroopButton">Start Stroop Test</button>
+          <button id="resetStroopButton" class="secondary-button">
+            Reset
+          </button>
+        </div>
+
+        <div class="test-footer">
+          <p id="stroopStatus">Trials completed: 0 / 10</p>
+          <p id="stroopMessage"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="memory" class="module-section">
+      <div class="info-card">
+        <p class="section-label">Module 03</p>
+        <h2>Memory Span Test</h2>
+
+        <p>
+          Memorize a short sequence of numbers, then enter the same sequence
+          after it disappears. Correct responses increase the sequence length.
+        </p>
+
+        <div class="instructions">
+          <div>
+            <strong>1</strong>
+            <p>View the sequence</p>
+          </div>
+
+          <div>
+            <strong>2</strong>
+            <p>Remember the order</p>
+          </div>
+
+          <div>
+            <strong>3</strong>
+            <p>Enter the sequence</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="memory-display">
+          <span id="memoryDisplay">Ready</span>
+          <small>Sequences increase after correct responses</small>
+        </div>
+
+        <div class="memory-input-row">
+          <input
+            id="memoryInput"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Enter the sequence"
+            disabled
+          />
+
+          <button id="submitMemoryButton" disabled>
+            Submit Answer
+          </button>
+        </div>
+
+        <div class="button-row">
+          <button id="startMemoryButton">Start Memory Test</button>
+          <button id="resetMemoryButton" class="secondary-button">
+            Reset
+          </button>
+        </div>
+
+        <div class="test-footer">
+          <p id="memoryStatus">Rounds completed: 0 / 6</p>
+          <p id="memoryMessage"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="choice" class="module-section">
+      <div class="info-card">
+        <p class="section-label">Module 04</p>
+        <h2>Choice Reaction Test</h2>
+
+        <p>
+          Wait for a coloured signal, then select the matching option. Unlike
+          simple reaction time, this task requires both recognition and a
+          decision.
+        </p>
+
+        <div class="instructions">
+          <div>
+            <strong>1</strong>
+            <p>Wait for the signal</p>
+          </div>
+
+          <div>
+            <strong>2</strong>
+            <p>Identify its colour</p>
+          </div>
+
+          <div>
+            <strong>3</strong>
+            <p>Select the match</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="choice-display">
+          <div id="choiceStimulus" class="choice-stimulus">
+            <span>Ready</span>
+          </div>
+
+          <small id="choicePrompt">Press start to begin the test</small>
+        </div>
+
+        <div class="colour-options">
+          <button class="choice-option red-button" data-choice="red">
+            Red
+          </button>
+
+          <button class="choice-option blue-button" data-choice="blue">
+            Blue
+          </button>
+
+          <button class="choice-option green-button" data-choice="green">
+            Green
+          </button>
+
+          <button class="choice-option yellow-button" data-choice="yellow">
+            Yellow
+          </button>
+        </div>
+
+        <div class="button-row">
+          <button id="startChoiceButton">Start Choice Test</button>
+          <button id="resetChoiceButton" class="secondary-button">
+            Reset
+          </button>
+        </div>
+
+        <div class="test-footer">
+          <p id="choiceStatus">Trials completed: 0 / 10</p>
+          <p id="choiceMessage"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="content-section">
       <div class="section-heading">
         <p class="section-label">Performance Summary</p>
         <h2>Your Results Dashboard</h2>
+
         <p>
-          After completing five trials, Cognify summarizes your average, fastest, and slowest reaction time.
+          Complete each module to generate a summary of your cognitive
+          performance during this session.
         </p>
       </div>
 
-      <div class="results-grid">
-        <div class="result-card">
-          <p>Average</p>
-          <h3 id="averageResult">Not completed</h3>
-          <span>Main performance score</span>
+      <div class="result-group">
+        <h3 class="group-heading">Simple Reaction Time</h3>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <p>Average</p>
+            <h3 id="reactionAverageResult">Not completed</h3>
+            <span>Main reaction time score</span>
+          </div>
+
+          <div class="result-card">
+            <p>Fastest</p>
+            <h3 id="reactionFastestResult">Not completed</h3>
+            <span>Fastest recorded trial</span>
+          </div>
+
+          <div class="result-card">
+            <p>Slowest</p>
+            <h3 id="reactionSlowestResult">Not completed</h3>
+            <span>Slowest recorded trial</span>
+          </div>
         </div>
 
-        <div class="result-card">
-          <p>Fastest</p>
-          <h3 id="fastestResult">Not completed</h3>
-          <span>Best trial</span>
-        </div>
-
-        <div class="result-card">
-          <p>Slowest</p>
-          <h3 id="slowestResult">Not completed</h3>
-          <span>Slowest trial</span>
+        <div class="interpretation">
+          <h3>Interpretation</h3>
+          <p id="reactionInterpretation">
+            Complete the reaction time test to generate your interpretation.
+          </p>
         </div>
       </div>
 
-      <div class="interpretation">
-        <h3>Interpretation</h3>
-        <p id="interpretationText">
-          Complete the reaction time test to generate your interpretation.
-        </p>
+      <div class="result-group">
+        <h3 class="group-heading">Stroop Attention Test</h3>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <p>Accuracy</p>
+            <h3 id="stroopAccuracyResult">Not completed</h3>
+            <span>Percentage answered correctly</span>
+          </div>
+
+          <div class="result-card">
+            <p>Average Response</p>
+            <h3 id="stroopAverageResult">Not completed</h3>
+            <span>Average decision time</span>
+          </div>
+
+          <div class="result-card">
+            <p>Correct Answers</p>
+            <h3 id="stroopCorrectResult">Not completed</h3>
+            <span>Correct trials out of ten</span>
+          </div>
+        </div>
+
+        <div class="interpretation">
+          <h3>Interpretation</h3>
+          <p id="stroopInterpretation">
+            Complete the Stroop test to generate your interpretation.
+          </p>
+        </div>
+      </div>
+
+      <div class="result-group">
+        <h3 class="group-heading">Memory Span Test</h3>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <p>Highest Span</p>
+            <h3 id="memorySpanResult">Not completed</h3>
+            <span>Longest correctly recalled sequence</span>
+          </div>
+
+          <div class="result-card">
+            <p>Correct Rounds</p>
+            <h3 id="memoryCorrectResult">Not completed</h3>
+            <span>Correct rounds out of six</span>
+          </div>
+
+          <div class="result-card">
+            <p>Accuracy</p>
+            <h3 id="memoryAccuracyResult">Not completed</h3>
+            <span>Percentage recalled correctly</span>
+          </div>
+        </div>
+
+        <div class="interpretation">
+          <h3>Interpretation</h3>
+          <p id="memoryInterpretation">
+            Complete the memory test to generate your interpretation.
+          </p>
+        </div>
+      </div>
+
+      <div class="result-group">
+        <h3 class="group-heading">Choice Reaction Test</h3>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <p>Average Response</p>
+            <h3 id="choiceAverageResult">Not completed</h3>
+            <span>Average decision response time</span>
+          </div>
+
+          <div class="result-card">
+            <p>Accuracy</p>
+            <h3 id="choiceAccuracyResult">Not completed</h3>
+            <span>Percentage answered correctly</span>
+          </div>
+
+          <div class="result-card">
+            <p>Correct Answers</p>
+            <h3 id="choiceCorrectResult">Not completed</h3>
+            <span>Correct trials out of ten</span>
+          </div>
+        </div>
+
+        <div class="interpretation">
+          <h3>Interpretation</h3>
+          <p id="choiceInterpretation">
+            Complete the choice reaction test to generate your interpretation.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section id="benchmarks" class="benchmark-section">
+    <section id="benchmarks" class="content-section">
       <div class="section-heading">
-        <p class="section-label">Score Comparison</p>
-        <h2>How to understand your reaction time</h2>
+        <p class="section-label">Educational Score Guides</p>
+        <h2>How to understand your results</h2>
+
         <p>
-          Reaction time is not only about the brain. Your score can also be affected by attention, fatigue, distraction, mouse speed, screen refresh rate, browser delay, and device performance.
+          These broad categories are included for educational comparison only.
+          They are not clinical standards or medical benchmarks.
         </p>
       </div>
 
-      <div class="benchmark-grid">
-        <div class="benchmark-card">
+      <h3 class="group-heading">Reaction Time Guide</h3>
+
+      <div class="guide-grid four-column-grid">
+        <div class="guide-card">
           <h3>Under 250 ms</h3>
-          <p>Fast response for this browser based task.</p>
+          <p>Fast response during this short browser based task.</p>
         </div>
 
-        <div class="benchmark-card">
+        <div class="guide-card">
           <h3>250 to 350 ms</h3>
-          <p>Common range for many online visual reaction time tasks.</p>
+          <p>Common range during many online visual reaction tasks.</p>
         </div>
 
-        <div class="benchmark-card">
+        <div class="guide-card">
           <h3>350 to 500 ms</h3>
-          <p>Slower response, possibly affected by focus, fatigue, or device delay.</p>
+          <p>Slower response that may be influenced by several factors.</p>
         </div>
 
-        <div class="benchmark-card">
+        <div class="guide-card">
           <h3>Over 500 ms</h3>
-          <p>Delayed for this task, but not a medical result or diagnosis.</p>
+          <p>Delayed for this task, but not a medical result.</p>
         </div>
       </div>
 
       <div class="research-note">
-        <h3>Why scores vary</h3>
+        <h3>Why reaction time scores vary</h3>
+
         <p>
-          Browser based reaction time tests are useful for education, but they are less controlled than lab based testing. A computer, browser, monitor, mouse, trackpad, and testing environment can all influence the final number.
+          Attention, fatigue, distraction, screen refresh rate, browser
+          performance, input delay, and device performance can influence
+          reaction time results.
         </p>
+      </div>
+
+      <h3 class="group-heading guide-heading">Stroop Accuracy Guide</h3>
+
+      <div class="guide-grid three-column-grid">
+        <div class="guide-card">
+          <h3>90 to 100%</h3>
+          <p>High accuracy during this short selective attention task.</p>
+        </div>
+
+        <div class="guide-card">
+          <h3>75 to 89%</h3>
+          <p>Moderate accuracy with some interference from the task.</p>
+        </div>
+
+        <div class="guide-card">
+          <h3>Below 75%</h3>
+          <p>The task may have been challenging or completed too quickly.</p>
+        </div>
+      </div>
+
+      <h3 class="group-heading guide-heading">Memory Span Guide</h3>
+
+      <div class="guide-grid three-column-grid">
+        <div class="guide-card">
+          <h3>7 or More Digits</h3>
+          <p>Longer sequence recall during this short task.</p>
+        </div>
+
+        <div class="guide-card">
+          <h3>5 to 6 Digits</h3>
+          <p>Moderate sequence recall during this session.</p>
+        </div>
+
+        <div class="guide-card">
+          <h3>Below 5 Digits</h3>
+          <p>The task may have been challenging during this session.</p>
+        </div>
+      </div>
+
+      <h3 class="group-heading guide-heading">Choice Reaction Guide</h3>
+
+      <div class="guide-grid three-column-grid">
+        <div class="guide-card">
+          <h3>Fast and Accurate</h3>
+          <p>Quick decisions with high response accuracy.</p>
+        </div>
+
+        <div class="guide-card">
+          <h3>Accurate but Slower</h3>
+          <p>A careful response style that prioritizes accuracy.</p>
+        </div>
+
+        <div class="guide-card">
+          <h3>Fast but Less Accurate</h3>
+          <p>Speed may have been prioritized over correct responses.</p>
+        </div>
       </div>
     </section>
 
-    <section id="science" class="science-section">
-      <div>
+    <section id="science" class="content-section">
+      <div class="section-heading">
         <p class="section-label">About the Science</p>
-        <h2>What this project demonstrates</h2>
+        <h2>What the modules demonstrate</h2>
       </div>
 
       <div class="science-grid">
         <div class="science-card">
           <h3>Reaction Time</h3>
+
           <p>
-            Reaction time is the delay between a stimulus appearing and a person responding to it. In Cognify, the stimulus is the green box and the response is the click.
+            Reaction time is the delay between a stimulus appearing and a
+            person responding to it.
           </p>
         </div>
 
         <div class="science-card">
-          <h3>Attention</h3>
+          <h3>Selective Attention</h3>
+
           <p>
-            Focus can affect performance. If a user is distracted, tired, or clicking too early, their results may become slower or less consistent.
+            Selective attention allows someone to focus on relevant information
+            while ignoring distracting information.
+          </p>
+        </div>
+
+        <div class="science-card">
+          <h3>Working Memory</h3>
+
+          <p>
+            Working memory temporarily holds information so it can be used
+            during an immediate task.
+          </p>
+        </div>
+
+        <div class="science-card">
+          <h3>Decision Speed</h3>
+
+          <p>
+            Choice reaction tasks require a person to identify a signal,
+            select an appropriate response, and act.
+          </p>
+        </div>
+
+        <div class="science-card">
+          <h3>Inhibitory Control</h3>
+
+          <p>
+            Inhibitory control helps suppress an automatic response when a
+            different response is required.
           </p>
         </div>
 
         <div class="science-card">
           <h3>Consistency</h3>
+
           <p>
-            Comparing fastest, slowest, and average reaction time helps show whether responses were stable across trials or varied from attempt to attempt.
+            Comparing performance across multiple trials helps show whether
+            responses remain stable or vary.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="limitations" class="limitations-section">
+    <section id="limitations" class="content-section">
       <div class="section-heading">
         <p class="section-label">Responsible Use</p>
-        <h2>Educational limits</h2>
+        <h2>Educational limitations</h2>
+
         <p>
-          Cognify is meant to demonstrate cognitive science concepts through a simple web app. It should not be used to diagnose, screen, or treat any medical condition.
+          Cognify demonstrates cognitive science concepts through browser based
+          tasks. It should not be used to diagnose, screen, or treat any
+          medical condition.
         </p>
       </div>
 
       <div class="limitations-box">
-        Cognify is an educational cognitive performance demo. It is not a medical device and does not diagnose ADHD, concussion, neurological disease, or any health condition. Results should be interpreted as a short browser based performance snapshot, not a clinical assessment.
+        Cognify is an educational cognitive performance demonstration. It is
+        not a medical device and does not diagnose ADHD, concussion,
+        neurological disease, or any health condition. Results should be
+        interpreted as a short browser based performance snapshot, not a
+        clinical assessment.
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Built by Aaron Challackal as a health tech and cognitive science portfolio project.</p>
+    <p>
+      Built by Aaron Challackal as a health technology and cognitive science
+      portfolio project.
+    </p>
   </footer>
 
   <script src="script.js"></script>
