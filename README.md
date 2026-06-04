@@ -1,85 +1,90 @@
 # Cognify
 
-Cognify is an interactive cognitive performance testing platform designed to explore reaction time, selective attention, working memory, and decision speed through short browser based tasks.
+Cognify is an interactive cognitive testing website that explores reaction time, attention, memory, and decision making through short browser based tasks.
 
-The project combines cognitive science concepts with an accessible and visually engaging interface. It is intended as an educational health technology project and portfolio demonstration.
+I have always been interested in how the brain works, especially how things like sleep, focus, fatigue, distractions, and practice can affect the way someone performs. I wanted to create something that took those ideas and turned them into an actual experience people could try for themselves.
+
+Cognify is designed to be simple, interactive, and easy to use. It can be completed individually, but I also wanted it to be something people could try with their friends, classmates, or peers. Users can compare results, challenge each other, and see how their strengths differ across the different tasks.
+
+The scores can also be used as a personal benchmark or reference point. Someone can complete the tests now, come back later, and compare their results to see how their performance changes over time.
 
 ## Live Demo
 
 [Cognify Live Website](https://aaronchallackal-cmd.github.io/Cognify/)
 
-## Overview
+## What Cognify Includes
 
-Cognify includes four interactive cognitive tasks that allow users to complete short assessments and review their performance.
-
-Each task measures a different aspect of cognitive performance and presents results through a centralized results dashboard.
-
-## Cognitive Tasks
+Cognify currently includes four interactive cognitive tasks.
 
 ### Reaction Time
 
-Measures visual response speed by asking users to react as quickly as possible when a visual stimulus appears.
+The reaction time task measures how quickly a user responds after a visual stimulus appears.
+
+This task focuses on visual processing speed and response speed.
 
 ### Stroop Task
 
-Measures selective attention and cognitive interference by asking users to identify the colour of a word while ignoring the word itself.
+The Stroop task measures selective attention and cognitive interference.
+
+Users must identify the colour of a word while ignoring the meaning of the word itself.
 
 ### Memory Task
 
-Measures short term working memory by asking users to remember and reproduce visual information.
+The memory task measures short term visual memory.
+
+Users are shown visual information and must remember and reproduce it correctly.
 
 ### Choice Reaction Task
 
-Measures decision speed by requiring users to select the correct response from multiple possible options.
+The choice reaction task measures decision speed and response accuracy.
+
+Users must quickly choose the correct response from multiple possible options.
 
 ## Results Dashboard
 
-The results dashboard summarizes performance across all completed tasks.
+After completing the tasks, users can view their performance through a central results dashboard.
 
-Users can review:
+The dashboard provides an overview of several areas of cognitive performance, including:
 
 1. Reaction speed
-2. Accuracy
-3. Attention performance
-4. Working memory performance
+2. Attention
+3. Memory
+4. Accuracy
 5. Decision speed
 
-## Science Section
+The dashboard makes it easy to compare results across tasks and provides users with a clear reference point for future attempts.
 
-Cognify includes an educational science section explaining the cognitive processes involved in each task.
+## Why I Built Cognify
 
-The platform introduces concepts related to:
+I built Cognify because I have always been interested in neuroscience, cognitive performance, healthcare, and technology.
 
-1. Visual processing
-2. Selective attention
-3. Working memory
-4. Cognitive interference
-5. Decision making
-6. Reaction time variability
+I liked the idea of taking cognitive assessments that are often discussed in research or psychology and turning them into something that people could actually interact with themselves.
+
+I also wanted Cognify to feel social. Someone could complete the tasks with their friends or peers and compare who has the fastest reaction time, the strongest memory, or the best attention score. It creates friendly competition while also helping people learn more about how they perform.
+
+Another reason I built Cognify was to create something people could use as a benchmark. A user could complete the tasks when they are well rested, tired, distracted, or after practising and compare how their scores change.
+
+The results are not meant to diagnose any medical condition, but they can provide a useful reference point and make cognitive testing more engaging and accessible.
+
+Building Cognify also gave me the opportunity to improve my skills in web development, user interface design, problem solving, and project development. I wanted the final product to feel polished and complete while still being easy for anyone to use.
 
 ## Features
 
-Interactive browser based cognitive tasks
-
-Responsive and modern user interface
-
-Centralized results dashboard
-
-Educational cognitive science explanations
-
-No account or installation required
-
-Immediate performance feedback
+1. Four interactive cognitive tasks
+2. Immediate feedback after each task
+3. A central results dashboard
+4. Educational explanations of cognitive concepts
+5. A clean and responsive interface
+6. No account or installation required
+7. Personal benchmarking
+8. Score comparison with friends and peers
 
 ## Technologies Used
 
-HTML
-
-CSS
-
-JavaScript
-
-GitHub Pages
+1. HTML
+2. CSS
+3. JavaScript
+4. GitHub Pages
 
 ## How to Use Cognify
 
@@ -88,7 +93,9 @@ GitHub Pages
 3. Read the instructions
 4. Complete the task
 5. Review your results
-6. Complete additional tasks to build a broader cognitive performance profile
+6. Try the remaining tasks
+7. Compare scores with friends or peers
+8. Repeat the tasks later to create a personal benchmark
 
 ## Running the Project Locally
 
