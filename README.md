@@ -103,8 +103,13 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/aaronchallackal-cmd/Cognify.git
+```
 
 ## Copyright
+
+© 2026 Aaron Challackal. All rights reserved.
+
+Cognify was created for educational and portfolio purposes. The source code, design, and content may not be copied, modified, redistributed, or republished without permission.
 
 © 2026 Aaron Challackal. All rights reserved.
 
