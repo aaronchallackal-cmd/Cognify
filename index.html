@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognify | Cognitive Performance Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Cognify</div>
+    <nav>
+      <a href="#test">Reaction Test</a>
+      <a href="#results">Results</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="tagline">Interactive Cognitive Performance Lab</p>
+      <h1>Test your reaction time through a simple browser based task.</h1>
+      <p class="hero-text">
+        Cognify is an educational cognitive performance demo that measures reaction time through short interactive tasks.
+      </p>
+      <a href="#test" class="primary-button">Start Test</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="test" class="card">
+      <h2>Simple Reaction Time Test</h2>
+      <p>
+        Click start, wait for the box to turn green, then click as quickly as you can.
+        The test includes 5 trials.
+      </p>
+
+      <div id="reactionBox" class="reaction-box">
+        Click Start to Begin
+      </div>
+
+      <div class="button-row">
+        <button id="startButton">Start Test</button>
+        <button id="resetButton" class="secondary-button">Reset</button>
+      </div>
+
+      <p id="trialStatus" class="status-text">Trials completed: 0 / 5</p>
+      <p id="message" class="message-text"></p>
+    </section>
+
+    <section id="results" class="card">
+      <h2>Results Dashboard</h2>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <p>Average Reaction Time</p>
+          <h3 id="averageResult">Not completed</h3>
+        </div>
+
+        <div class="result-card">
+          <p>Fastest Reaction Time</p>
+          <h3 id="fastestResult">Not completed</h3>
+        </div>
+
+        <div class="result-card">
+          <p>Slowest Reaction Time</p>
+          <h3 id="slowestResult">Not completed</h3>
+        </div>
+      </div>
+
+      <div class="interpretation">
+        <h3>Interpretation</h3>
+        <p id="interpretationText">
+          Complete the reaction time test to see your results.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About Cognify</h2>
+      <p>
+        Cognify is a browser based cognitive performance project designed to demonstrate concepts such as reaction time, attention, and response consistency.
+      </p>
+      <p class="disclaimer">
+        Educational disclaimer: Cognify is not a medical device and does not diagnose ADHD, concussion, neurological disease, or any health condition.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built as an educational health tech and cognitive science project.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
