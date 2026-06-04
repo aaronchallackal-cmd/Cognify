@@ -9,87 +9,229 @@
 <body>
 
   <header class="header">
-    <div class="logo">Cognify</div>
+    <div class="logo">
+      <span class="logo-mark"></span>
+      Cognify
+    </div>
+
     <nav>
-      <a href="#test">Reaction Test</a>
-      <a href="#results">Results</a>
-      <a href="#about">About</a>
+      <a href="#test">Test</a>
+      <a href="#benchmarks">Benchmarks</a>
+      <a href="#science">Science</a>
+      <a href="#limitations">Limitations</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <p class="tagline">Interactive Cognitive Performance Lab</p>
-      <h1>Test your reaction time through a simple browser based task.</h1>
+    <div class="hero-left">
+      <p class="eyebrow">Cognitive Performance Lab</p>
+      <h1>Measure reaction time through a clean interactive browser task.</h1>
       <p class="hero-text">
-        Cognify is an educational cognitive performance demo that measures reaction time through short interactive tasks.
+        Cognify is an educational health tech project that demonstrates how response speed, attention, and consistency can be measured through short cognitive tasks.
       </p>
-      <a href="#test" class="primary-button">Start Test</a>
+
+      <div class="hero-buttons">
+        <a href="#test" class="primary-button">Start Reaction Test</a>
+        <a href="#science" class="ghost-button">Learn the Science</a>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="metric-preview">
+        <p>Current Module</p>
+        <h3>Reaction Time</h3>
+      </div>
+
+      <div class="mini-grid">
+        <div>
+          <span>Trials</span>
+          <strong>5</strong>
+        </div>
+        <div>
+          <span>Measures</span>
+          <strong>Speed</strong>
+        </div>
+        <div>
+          <span>Output</span>
+          <strong>Dashboard</strong>
+        </div>
+      </div>
+
+      <div class="hero-explanation">
+        <h4>What this module measures</h4>
+        <p>
+          This task measures the time between a visual signal appearing and your click response. Lower times usually mean faster responses, but device delay and focus can affect results.
+        </p>
+      </div>
     </div>
   </section>
 
   <main>
-    <section id="test" class="card">
-      <h2>Simple Reaction Time Test</h2>
-      <p>
-        Click start, wait for the box to turn green, then click as quickly as you can.
-        The test includes 5 trials.
-      </p>
+    <section id="test" class="section-grid">
+      <div class="info-card">
+        <p class="section-label">Module 01</p>
+        <h2>Simple Reaction Time</h2>
+        <p>
+          Wait for the stimulus to turn green, then click as fast as possible. Cognify records your response time across five trials and summarizes your performance.
+        </p>
 
-      <div id="reactionBox" class="reaction-box">
-        Click Start to Begin
+        <div class="instructions">
+          <div>
+            <strong>1</strong>
+            <p>Press start</p>
+          </div>
+          <div>
+            <strong>2</strong>
+            <p>Wait for green</p>
+          </div>
+          <div>
+            <strong>3</strong>
+            <p>Click immediately</p>
+          </div>
+        </div>
       </div>
 
-      <div class="button-row">
-        <button id="startButton">Start Test</button>
-        <button id="resetButton" class="secondary-button">Reset</button>
-      </div>
+      <div class="test-card">
+        <div id="reactionBox" class="reaction-box">
+          <span>Ready when you are</span>
+          <small>Press start to begin the test</small>
+        </div>
 
-      <p id="trialStatus" class="status-text">Trials completed: 0 / 5</p>
-      <p id="message" class="message-text"></p>
+        <div class="button-row">
+          <button id="startButton">Start Test</button>
+          <button id="resetButton" class="secondary-button">Reset</button>
+        </div>
+
+        <div class="test-footer">
+          <p id="trialStatus">Trials completed: 0 / 5</p>
+          <p id="message"></p>
+        </div>
+      </div>
     </section>
 
-    <section id="results" class="card">
-      <h2>Results Dashboard</h2>
+    <section id="results" class="results-section">
+      <div class="section-heading">
+        <p class="section-label">Performance Summary</p>
+        <h2>Your Results Dashboard</h2>
+        <p>
+          After completing five trials, Cognify summarizes your average, fastest, and slowest reaction time.
+        </p>
+      </div>
 
       <div class="results-grid">
         <div class="result-card">
-          <p>Average Reaction Time</p>
+          <p>Average</p>
           <h3 id="averageResult">Not completed</h3>
+          <span>Main performance score</span>
         </div>
 
         <div class="result-card">
-          <p>Fastest Reaction Time</p>
+          <p>Fastest</p>
           <h3 id="fastestResult">Not completed</h3>
+          <span>Best trial</span>
         </div>
 
         <div class="result-card">
-          <p>Slowest Reaction Time</p>
+          <p>Slowest</p>
           <h3 id="slowestResult">Not completed</h3>
+          <span>Slowest trial</span>
         </div>
       </div>
 
       <div class="interpretation">
         <h3>Interpretation</h3>
         <p id="interpretationText">
-          Complete the reaction time test to see your results.
+          Complete the reaction time test to generate your interpretation.
         </p>
       </div>
     </section>
 
-    <section id="about" class="card">
-      <h2>About Cognify</h2>
-      <p>
-        Cognify is a browser based cognitive performance project designed to demonstrate concepts such as reaction time, attention, and response consistency.
-      </p>
-      <p class="disclaimer">
-        Educational disclaimer: Cognify is not a medical device and does not diagnose ADHD, concussion, neurological disease, or any health condition.
-      </p>
+    <section id="benchmarks" class="benchmark-section">
+      <div class="section-heading">
+        <p class="section-label">Score Comparison</p>
+        <h2>How to understand your reaction time</h2>
+        <p>
+          Reaction time is not only about the brain. Your score can also be affected by attention, fatigue, distraction, mouse speed, screen refresh rate, browser delay, and device performance.
+        </p>
+      </div>
+
+      <div class="benchmark-grid">
+        <div class="benchmark-card">
+          <h3>Under 250 ms</h3>
+          <p>Fast response for this browser based task.</p>
+        </div>
+
+        <div class="benchmark-card">
+          <h3>250 to 350 ms</h3>
+          <p>Common range for many online visual reaction time tasks.</p>
+        </div>
+
+        <div class="benchmark-card">
+          <h3>350 to 500 ms</h3>
+          <p>Slower response, possibly affected by focus, fatigue, or device delay.</p>
+        </div>
+
+        <div class="benchmark-card">
+          <h3>Over 500 ms</h3>
+          <p>Delayed for this task, but not a medical result or diagnosis.</p>
+        </div>
+      </div>
+
+      <div class="research-note">
+        <h3>Why scores vary</h3>
+        <p>
+          Browser based reaction time tests are useful for education, but they are less controlled than lab based testing. A computer, browser, monitor, mouse, trackpad, and testing environment can all influence the final number.
+        </p>
+      </div>
+    </section>
+
+    <section id="science" class="science-section">
+      <div>
+        <p class="section-label">About the Science</p>
+        <h2>What this project demonstrates</h2>
+      </div>
+
+      <div class="science-grid">
+        <div class="science-card">
+          <h3>Reaction Time</h3>
+          <p>
+            Reaction time is the delay between a stimulus appearing and a person responding to it. In Cognify, the stimulus is the green box and the response is the click.
+          </p>
+        </div>
+
+        <div class="science-card">
+          <h3>Attention</h3>
+          <p>
+            Focus can affect performance. If a user is distracted, tired, or clicking too early, their results may become slower or less consistent.
+          </p>
+        </div>
+
+        <div class="science-card">
+          <h3>Consistency</h3>
+          <p>
+            Comparing fastest, slowest, and average reaction time helps show whether responses were stable across trials or varied from attempt to attempt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="limitations" class="limitations-section">
+      <div class="section-heading">
+        <p class="section-label">Responsible Use</p>
+        <h2>Educational limits</h2>
+        <p>
+          Cognify is meant to demonstrate cognitive science concepts through a simple web app. It should not be used to diagnose, screen, or treat any medical condition.
+        </p>
+      </div>
+
+      <div class="limitations-box">
+        Cognify is an educational cognitive performance demo. It is not a medical device and does not diagnose ADHD, concussion, neurological disease, or any health condition. Results should be interpreted as a short browser based performance snapshot, not a clinical assessment.
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Built as an educational health tech and cognitive science project.</p>
+    <p>Built by Aaron Challackal as a health tech and cognitive science portfolio project.</p>
   </footer>
 
   <script src="script.js"></script>
